@@ -1,0 +1,12 @@
+```mermaid
+sequenceDiagram
+    participant browser as Browser
+    participant server as Server
+
+    browser->>server: GET /spa
+    server-->>browser: HTML document
+    browser->>server: GET /spa.js
+    server-->>browser: JavaScript file
+    browser->>server: GET /data.json
+    server-->>browser: Notes as JSON
+    Note right of browser: JavaScript displays the notes on the page
