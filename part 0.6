@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Write note and click Save
+    Browser->>Server: POST /new_note with note data
+    Server->>Server: Save the new note
+    Server-->>Browser: JSON response
+    Browser->>Browser: JavaScript updates the page
